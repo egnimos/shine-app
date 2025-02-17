@@ -22,7 +22,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/shr_logo" />
+            app:srcCompat="@drawable/shr_logo"
+            app:tint="@color/textColorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,13 +31,13 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="132dp"
             android:text="@string/shr_app_name"
-            android:textAllCaps="true"
-            android:textSize="16sp" />
+            android:textAppearance="@style/TextAppearance.Shrine.title"/>
 
         <!-- Snippet from "Add text fields" section goes here. -->
 <!--        UserName-->
         <com.google.android.material.textfield.TextInputLayout android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            style="@style/Widget.Shrine.TextInputLayout"
             android:id="@+id/username"
             android:layout_margin="10dp"
             android:hint="@string/username">
@@ -51,6 +52,7 @@
 <!--        password-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
+            style="@style/Widget.Shrine.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -71,7 +73,7 @@
 
 <!--            cancel text button-->
             <Button
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Shrine.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cancel_button"
@@ -86,6 +88,7 @@
 <!--            next filled button-->
             <Button
                 android:id= "@+id/submit_button"
+                style="@style/Widget.Shrine.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submit"

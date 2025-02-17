@@ -8,7 +8,9 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        style="@style/Widget.Shrine.Toolbar"
+        app:elevation="0dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/app_bar"
@@ -16,8 +18,24 @@
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
             app:title = "@string/home"
-            app:titleTextColor="#f1f1f1"
             app:navigationIcon="@drawable/shr_menu"
             />
     </com.google.android.material.appbar.AppBarLayout>
+    
+    
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:background="@color/productGridBackgroundColor"
+        android:elevation="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.core.widget.NestedScrollView>
 </FrameLayout>
